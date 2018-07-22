@@ -31,6 +31,16 @@
         </activity>
         <activity android:name=".QuizActivity"
             android:launchMode="singleTop"/>
+        <!-- "singleTop", activity will be brought to the front, instead of being restarted -->
+
+        <!-- TODO (Exercise TMED.06-4) Create a receiver to hear actions from the notification dropdown -->
+        <receiver android:name="QuizActivity$MediaReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+
     </application>
 
 </manifest>
